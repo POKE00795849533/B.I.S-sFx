@@ -1,51 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>B.I.S'sFx</title>
-    <link rel="stylesheet" href="css/home.css" />
-  </head>
-  <body>
-    <div class="dashboard">
-      <header class="header">
-        <h1 class="title">Bem-vindo, <span class="username">Nome</span>!</h1>
-        <div class="header-decoration"></div>
-      </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>B.I.S'sFx</title>
+        <link rel="stylesheet" href="css/home.css" />
+    </head>
+    <body>
+        <div class="dashboard">
+            <header class="header">
+                <h1 class="title">
+                    Bem-vindo, <span class="username">Nome</span>!
+                </h1>
+                <div class="header-decoration"></div>
+            </header>
 
-      <main class="main">
-        <section class="secPeople">
-          <ul class="nav-menu">
-            <li class="nav-item friends" onclick="openFriends()">
-              <div class="nav-icon">👥</div>
-              <span class="nav-text">Amigos</span>
-              <div class="nav-highlight"></div>
-            </li>
-            <li class="nav-item enemies" onclick="openEnemies()">
-              <div class="nav-icon">⚔️</div>
-              <span class="nav-text">Inimigos</span>
-              <div class="nav-highlight"></div>
-            </li>
-            <li class="nav-item family" onclick="openFamily()">
-              <div class="nav-icon">👪</div>
-              <span class="nav-text">Familiares</span>
-              <div class="nav-highlight"></div>
-            </li>
-            <li class="nav-item colleagues" onclick="openColleagues()">
-              <div class="nav-icon">💼</div>
-              <span class="nav-text">Colegas</span>
-              <div class="nav-highlight"></div>
-            </li>
-            <li class="nav-item people" onclick="openPeople()">
-              <div class="nav-icon">🌍</div>
-              <span class="nav-text">Pessoas</span>
-              <div class="nav-highlight"></div>
-            </li>
-          </ul>
-        </section>
-      </main>
-    </div>
-    <script src="js/home.js"></script>
-  </body>
+            <main class="main">
+                <section class="secPeople">
+                    <ul class="nav-menu">
+                        <li class="nav-item friends" onclick="openFriends()">
+                            <div class="nav-icon">👥</div>
+                            <span class="nav-text">Amigos</span>
+                            <div class="nav-highlight"></div>
+                        </li>
+                        <li class="nav-item enemies" onclick="openEnemies()">
+                            <div class="nav-icon">⚔️</div>
+                            <span class="nav-text">Inimigos</span>
+                            <div class="nav-highlight"></div>
+                        </li>
+                        <li class="nav-item family" onclick="openFamily()">
+                            <div class="nav-icon">👪</div>
+                            <span class="nav-text">Familiares</span>
+                            <div class="nav-highlight"></div>
+                        </li>
+                        <li
+                            class="nav-item colleagues"
+                            onclick="openColleagues()"
+                        >
+                            <div class="nav-icon">💼</div>
+                            <span class="nav-text">Colegas</span>
+                            <div class="nav-highlight"></div>
+                        </li>
+                        <li class="nav-item people" onclick="openPeople()">
+                            <div class="nav-icon">🌍</div>
+                            <span class="nav-text">Pessoas</span>
+                            <div class="nav-highlight"></div>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+        <script src="js/home.js"></script>
+    </body>
 </html>

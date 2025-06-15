@@ -1,242 +1,252 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --crimson: #dc143c;
-  --crimson-dark: #b01030;
-  --crimson-light: #ff2d55;
-  --bg-dark: #0f0f12;
-  --bg-light: #1a1a1f;
-  --bg-lighter: #25252d;
-  --text-primary: #f0f0f0;
-  --text-secondary: #b0b0b0;
-  --border-radius: 12px;
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  --nav-width: 500px;
+    --crimson: #dc143c;
+    --crimson-dark: #b01030;
+    --crimson-light: #ff2d55;
+    --bg-dark: #0f0f12;
+    --bg-light: #1a1a1f;
+    --bg-lighter: #25252d;
+    --text-primary: #f0f0f0;
+    --text-secondary: #b0b0b0;
+    --border-radius: 12px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --nav-width: 500px;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-primary);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: radial-gradient(
-      circle at 10% 20%,
-      rgba(220, 20, 60, 0.1) 0%,
-      transparent 20%
-    ),
-    radial-gradient(
-      circle at 90% 80%,
-      rgba(220, 20, 60, 0.1) 0%,
-      transparent 20%
-    );
-  animation: bgPulse 15s infinite alternate;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(220, 20, 60, 0.1) 0%,
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(220, 20, 60, 0.1) 0%,
+            transparent 20%
+        );
+    animation: bgPulse 15s infinite alternate;
 }
 
 .dashboard {
-  width: 100%;
-  max-width: var(--nav-width);
-  padding: 1.5rem;
+    width: 100%;
+    max-width: var(--nav-width);
+    padding: 1.5rem;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-  position: relative;
-  animation: fadeInDown 0.8s ease-out;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .header-decoration {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--crimson), transparent);
-  border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--crimson),
+        transparent
+    );
+    border-radius: 50%;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
 }
 
 .username {
-  color: var(--crimson);
-  font-weight: 700;
-  position: relative;
+    color: var(--crimson);
+    font-weight: 700;
+    position: relative;
 }
 
 .username::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--crimson);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--crimson);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
 }
 
 .username:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .nav-menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  animation: fadeInUp 0.8s ease-out;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .nav-item {
-  position: relative;
-  background-color: var(--bg-light);
-  border-radius: var(--border-radius);
-  padding: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-  overflow: hidden;
-  transition: var(--transition);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--crimson);
-  transition: var(--transition);
-  transform: scaleY(0);
-  transform-origin: bottom;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--crimson);
+    transition: var(--transition);
+    transform: scaleY(0);
+    transform-origin: bottom;
 }
 
 .nav-item:hover {
-  transform: translateY(-3px);
-  background-color: var(--bg-lighter);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    background-color: var(--bg-lighter);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .nav-item:hover::before {
-  transform: scaleY(1);
-  transform-origin: top;
+    transform: scaleY(1);
+    transform-origin: top;
 }
 
 .nav-item:hover .nav-highlight {
-  transform: translateX(0);
-  opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .nav-icon {
-  font-size: 1.5rem;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(220, 20, 60, 0.1);
-  border-radius: 50%;
-  transition: var(--transition);
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(220, 20, 60, 0.1);
+    border-radius: 50%;
+    transition: var(--transition);
 }
 
 .nav-item:hover .nav-icon {
-  background: rgba(220, 20, 60, 0.2);
-  transform: scale(1.1);
+    background: rgba(220, 20, 60, 0.2);
+    transform: scale(1.1);
 }
 
 .nav-text {
-  font-size: 1.1rem;
-  font-weight: 500;
-  flex-grow: 1;
-  transition: var(--transition);
+    font-size: 1.1rem;
+    font-weight: 500;
+    flex-grow: 1;
+    transition: var(--transition);
 }
 
 .nav-highlight {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(220, 20, 60, 0.1), transparent);
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: var(--transition);
-  pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(220, 20, 60, 0.1), transparent);
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: var(--transition);
+    pointer-events: none;
 }
 
 /* Animações */
 @keyframes bgPulse {
-  0% {
-    background-position: 10% 20%, 90% 80%;
-  }
-  100% {
-    background-position: 15% 25%, 85% 75%;
-  }
+    0% {
+        background-position:
+            10% 20%,
+            90% 80%;
+    }
+    100% {
+        background-position:
+            15% 25%,
+            85% 75%;
+    }
 }
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsividade */
 @media (max-width: 600px) {
-  .dashboard {
-    padding: 1rem;
-  }
+    .dashboard {
+        padding: 1rem;
+    }
 
-  .title {
-    font-size: 1.6rem;
-  }
+    .title {
+        font-size: 1.6rem;
+    }
 
-  .nav-item {
-    padding: 1rem;
-  }
+    .nav-item {
+        padding: 1rem;
+    }
 
-  .nav-text {
-    font-size: 1rem;
-  }
+    .nav-text {
+        font-size: 1rem;
+    }
 
-  .nav-icon {
-    font-size: 1.2rem;
-    width: 35px;
-    height: 35px;
-  }
+    .nav-icon {
+        font-size: 1.2rem;
+        width: 35px;
+        height: 35px;
+    }
 }
