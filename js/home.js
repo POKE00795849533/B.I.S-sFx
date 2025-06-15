@@ -1,9 +1,8 @@
 const buttonFriends = document.querySelector(".friends")
-const buttonEnimeis = document.querySelector(".enemies")
+const buttonEnemies = document.querySelector(".enemies")
 const buttonFamily = document.querySelector(".family")
 const buttonColleagues = document.querySelector(".colleagues")
 const buttonPeople = document.querySelector(".people")
-
 
 function openFriends(){
     window.location.href = "página de amigos";
