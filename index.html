@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Verificação de Acesso</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">Verifique o acesso</h1>
+      <form
+        action="http://localhost:3000/api/login"
+        method="POST"
+        class="form"
+        autocomplete="off"
+      >
+        <div class="form-group">
+          <label for="inputName" class="label">Nome:</label>
+          <input
+            type="text"
+            id="inputName"
+            name="username"
+            required
+            class="input"
+            minlength="3"
+            maxlength="6"
+            pattern="[A-Za-zÀ-ú\s]+"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="inputPassword" class="label">Senha:</label>
+          <input
+            type="password"
+            id="inputPassword"
+            name="password"
+            required
+            class="input"
+            minlength="3"
+            maxlength="15"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="inputCode" class="label">Código:</label>
+          <input
+            type="text"
+            id="inputCode"
+            name="code"
+            required
+            class="input"
+            minlength="3"
+            maxlength="3"
+            pattern="[A-Za-z0-9]+"
+          />
+        </div>
+
+        <button type="submit" class="button" name="buttonV">Verificar</button>
+      </form>
+    </main>
+  </body>
+</html>
