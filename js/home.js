@@ -5,7 +5,7 @@ const buttonColleagues = document.querySelector(".colleagues")
 const buttonPeople = document.querySelector(".people")
 
 function openFriends(){
-    window.location.href = "página de amigos";
+    window.location.href = "gbli.html";
 }
 function openEnemies(){
     window.location.href = "página de Inimigos";
